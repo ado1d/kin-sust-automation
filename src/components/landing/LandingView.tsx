@@ -78,27 +78,17 @@ function LandingView({ onRoleSelect }: { onRoleSelect: (role: string) => void })
         </div>
 
         {/* Role Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl w-full px-4">
+        {/* Only display the Donor card on the landing page. Volunteer and admin
+            cards have been removed to simplify the entry point. Volunteers and
+            administrators can still access their portals directly via
+            `/volunteer` and `/admin` URLs. */}
+        <div className="grid md:grid-cols-1 gap-6 max-w-5xl w-full px-4">
           <RoleCard
             icon={<HeartHandshake className="w-8 h-8" />}
             title="Donor"
             description="Make monetary or in-kind donations to support our causes"
             color="from-rose-500 to-pink-600"
             onClick={() => onRoleSelect('donor')}
-          />
-          <RoleCard
-            icon={<Users className="w-8 h-8" />}
-            title="Volunteer"
-            description="Join our team and help with donation pickups and distributions"
-            color="from-amber-500 to-orange-600"
-            onClick={() => onRoleSelect('volunteer')}
-          />
-          <RoleCard
-            icon={<Shield className="w-8 h-8" />}
-            title="Admin"
-            description="Manage donors, volunteers, events, and track all activities"
-            color="from-violet-500 to-purple-600"
-            onClick={() => onRoleSelect('admin')}
           />
         </div>
 
