@@ -4,3 +4,84 @@
 - Environments: .env.local, .env
 ✓ Ready in 821ms
 
+[browser] Error: Internal server error
+    at api (src/lib/api.ts:22:22)
+    at async fetchData (src/components/dashboard/DonorDashboard.tsx:41:57)
+  20 |   })
+  21 |   const data = await res.json()
+> 22 |   if (!res.ok) throw new Error(data.error || 'Request failed')
+     |                      ^
+  23 |   return data
+  24 | }
+  25 | (src/components/dashboard/DonorDashboard.tsx:50:15)
+[browser] Error: Internal server error
+    at api (src/lib/api.ts:22:22)
+    at async fetchData (src/components/dashboard/DonorDashboard.tsx:41:57)
+  20 |   })
+  21 |   const data = await res.json()
+> 22 |   if (!res.ok) throw new Error(data.error || 'Request failed')
+     |                      ^
+  23 |   return data
+  24 | }
+  25 | (src/components/dashboard/DonorDashboard.tsx:50:15)
+ GET / 200 in 765ms (next.js: 296ms, application-code: 469ms)
+Query error: {
+  text: 'SELECT "id", "name", "email", "status", "avatar", "phone", "address", "notes" FROM "Donor" WHERE "id',
+  error: error: (EMAXCONNSESSION) max clients reached in session mode - max clients are limited to pool_size: 15
+      at async query (src\lib\db.ts:35:17)
+      at async GET (src\app\api\auth\session\route.ts:29:22)
+    33 |   const start = Date.now()
+    34 |   try {
+  > 35 |     const res = await pool.query(text, params)
+       |                 ^
+    36 |     const duration = Date.now() - start
+    37 |     if (process.env.NODE_ENV !== 'production') {
+    38 |       console.log('Executed query', { text: text.substring(0, 100), duration, rows: res.ro... {
+    length: 117,
+    severity: 'FATAL',
+    code: 'XX000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: undefined,
+    line: undefined,
+    routine: undefined
+  }
+}
+Session error: error: (EMAXCONNSESSION) max clients reached in session mode - max clients are limited to pool_size: 15
+    at async query (src\lib\db.ts:35:17)
+    at async GET (src\app\api\auth\session\route.ts:29:22)
+  33 |   const start = Date.now()
+  34 |   try {
+> 35 |     const res = await pool.query(text, params)
+     |                 ^
+  36 |     const duration = Date.now() - start
+  37 |     if (process.env.NODE_ENV !== 'production') {
+  38 |       console.log('Executed query', { text: text.substring(0, 100), duration, rows: res.ro... {
+  length: 117,
+  severity: 'FATAL',
+  code: 'XX000',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  schema: undefined,
+  table: undefined,
+  column: undefined,
+  dataType: undefined,
+  constraint: undefined,
+  file: undefined,
+  line: undefined,
+  routine: undefined
+}
+ GET /api/auth/session 200 in 984ms (next.js: 157ms, application-code: 827ms)
