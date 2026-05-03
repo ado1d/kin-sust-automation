@@ -7,7 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@/components/ui/select'
 import { Textarea } from '@/components/ui/textarea'
 import { Checkbox } from '@/components/ui/checkbox'
-import { ArrowRight, Mail, Lock, Heart, Users, Shield, Phone, MapPin, Upload, Loader2, Moon, Sun } from 'lucide-react'
+import { ArrowRight, Mail, Lock, Heart, Users, Shield, Phone, MapPin, Upload, Loader2, Moon, Sun, HeartHandshake } from 'lucide-react'
 import { ThemeContext } from '@/contexts/ThemeContext'
 import { api } from '@/lib/api'
 import { toast } from '@/hooks/use-toast'
@@ -59,8 +59,8 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
 
   const roleColors = {
     donor: 'from-rose-500 to-pink-600',
-    volunteer: 'from-amber-500 to-orange-600',
-    admin: 'from-violet-500 to-purple-600'
+    volunteer: 'from-purple-500 to-purple-900',
+    admin: 'from-green-500 to-green-900'
   }
 
   return (
@@ -73,17 +73,19 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
             <img
               src="/kin-logo.png"
               alt="KIN Logo"
-              className="h-12 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
-          <button onClick={onBack} className="flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
-            <ArrowRight className="w-4 h-4 mr-2 rotate-180" /> Back to Home
-          </button>
+          {role === 'donor' && (
+            <button onClick={onBack} className="flex items-center text-muted-foreground hover:text-foreground mb-8 transition-colors">
+              <ArrowRight className="w-4 h-4 mr-2 rotate-180" /> Back to Home
+            </button>
+          )}
 
           <div className="mb-8">
             <div className={`inline-flex w-14 h-14 rounded-xl bg-gradient-to-br ${roleColors[role]} items-center justify-center text-white shadow-lg mb-4`}>
-              {role === 'donor' && <Heart className="w-7 h-7" />}
+              {role === 'donor' && <HeartHandshake className="w-7 h-7" />}
               {role === 'volunteer' && <Users className="w-7 h-7" />}
               {role === 'admin' && <Shield className="w-7 h-7" />}
             </div>
@@ -103,7 +105,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                 <Label htmlFor="name">Full Name</Label>
                 <Input
                   id="name"
-                  placeholder="John Doe"
+                  placeholder="Yak Safu"
                   value={formData.name || ''}
                   onChange={e => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -118,7 +120,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="you@example.com"
+                  placeholder="ashraful@hotmail.com"
                   className="pl-10"
                   value={formData.email || ''}
                   onChange={e => setFormData({ ...formData, email: e.target.value })}
@@ -167,7 +169,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                     <MapPin className="absolute left-3 top-3 w-4 h-4 text-muted-foreground" />
                     <Input
                       id="address"
-                      placeholder="123 Main St, City"
+                      placeholder="Sonapur, Begumganj, Noakhali"
                       className="pl-10"
                       value={formData.address || ''}
                       onChange={e => setFormData({ ...formData, address: e.target.value })}
@@ -248,7 +250,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                         <Label htmlFor="institution">Institution</Label>
                         <Input
                           id="institution"
-                          placeholder="University/College"
+                          placeholder="SUST"
                           value={formData.institution || ''}
                           onChange={e => setFormData({ ...formData, institution: e.target.value })}
                         />
@@ -257,7 +259,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                         <Label htmlFor="department">Department</Label>
                         <Input
                           id="department"
-                          placeholder="Department"
+                          placeholder="SWE"
                           value={formData.department || ''}
                           onChange={e => setFormData({ ...formData, department: e.target.value })}
                         />
@@ -278,7 +280,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                         <Label htmlFor="regNo">Registration No.</Label>
                         <Input
                           id="regNo"
-                          placeholder="Reg. Number"
+                          placeholder="2021831##"
                           value={formData.regNo || ''}
                           onChange={e => setFormData({ ...formData, regNo: e.target.value })}
                         />
@@ -303,7 +305,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
 
                     {/* Activities Checkboxes */}
                     <div className="space-y-2">
-                      <Label>Activities (Select all that apply)</Label>
+                      <Label>Activities you like of KIN-SUST</Label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-3 border rounded-lg max-h-48 overflow-y-auto">
                         {[
                           { id: 'blood_donation', label: 'Blood donation' },
@@ -404,7 +406,7 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
                             <div className="text-muted-foreground">
                               <Upload className="w-8 h-8 mx-auto mb-2" />
                               <p className="text-sm">Upload your photo</p>
-                              <p className="text-xs mt-1">JPG, PNG (Max 5MB)</p>
+                              <p className="text-xs mt-1">JPG, PNG (Max 600KB)</p>
                             </div>
                           )}
                         </label>
@@ -415,13 +417,13 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
               </>
             )}
 
-            {role === 'admin' && mode === 'login' && (
+            {/* {role === 'admin' && mode === 'login' && (
               <p className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg">
                 <strong>Demo credentials:</strong><br />
                 Email: admin@kin.org<br />
                 Password: admin123
               </p>
-            )}
+            )} */}
 
             <Button type="submit" className="w-full h-11 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800" disabled={loading}>
               {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : (mode === 'login' ? 'Sign In' : 'Create Account')}
@@ -453,8 +455,8 @@ export function AuthView({ role, mode, onLogin, onSwitch, onBack }: {
           </h2>
           <p className="text-xl text-white/90 max-w-md">
             {role === 'donor' && 'Your generosity helps us create positive change in communities around the world.'}
-            {role === 'volunteer' && 'Be part of something bigger. Help us deliver hope to those who need it most.'}
-            {role === 'admin' && 'Oversee operations and ensure every donation reaches its destination.'}
+            {role === 'volunteer' && 'Be part of kin-SUST'}
+            {role === 'admin' && 'Monitor and manage kin-SUST easily'}
           </p>
         </div>
 

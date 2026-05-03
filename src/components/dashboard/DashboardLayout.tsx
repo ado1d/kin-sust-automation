@@ -266,7 +266,7 @@ export function DashboardLayout({
 
       {/* Footer */}
       <footer className="mt-auto h-12 border-t bg-card dark:bg-gray-900 flex items-center justify-center px-4 text-sm text-muted-foreground">
-        &copy; 2024 KIN. Building stronger communities together.
+        &copy; 2026 KIN-SUST, made by  <a href="https://github.com/ado1d"  text-underline="true" bg-red-900="true"> Ayman</a>
       </footer>
     </div>
   )
