@@ -44,3 +44,7 @@ vercel.json
 
 .log
 /.log
+
+dev.log
+dev.log*
+/dev.log
