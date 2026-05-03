@@ -53,7 +53,7 @@ function MapCenterHandler({ initialLat, initialLng }: { initialLat?: number; ini
   useEffect(() => {
     if (!initialLat || !initialLng) {
       // Default to Dhaka, Bangladesh
-      map.setView([23.8103, 90.4125], 12)
+      map.setView([24.911212401895344, 91.83224043108657], 12)
     }
   }, [map, initialLat, initialLng])
 

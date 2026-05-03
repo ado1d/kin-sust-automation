@@ -8,3 +8,43 @@
  GET /api/auth/session 200 in 318ms (next.js: 254ms, application-code: 64ms)
  GET / 200 in 95ms (next.js: 7ms, application-code: 88ms)
  GET /api/auth/session 200 in 25ms (next.js: 5ms, application-code: 20ms)
+✓ Compiled in 1386ms
+ GET / 200 in 315ms (next.js: 213ms, application-code: 101ms)
+✓ Compiled in 163ms
+ GET / 200 in 149ms (next.js: 103ms, application-code: 47ms)
+✓ Compiled in 245ms
+ GET / 200 in 175ms (next.js: 125ms, application-code: 51ms)
+✓ Compiled in 71ms
+ GET / 200 in 131ms (next.js: 93ms, application-code: 38ms)
+✓ Compiled in 77ms
+ GET / 200 in 154ms (next.js: 105ms, application-code: 48ms)
+✓ Compiled in 95ms
+ GET / 200 in 152ms (next.js: 107ms, application-code: 45ms)
+✓ Compiled in 80ms
+ GET / 200 in 135ms (next.js: 94ms, application-code: 40ms)
+✓ Compiled in 75ms
+ GET / 200 in 143ms (next.js: 96ms, application-code: 47ms)
+✓ Compiled in 916ms
+ GET / 200 in 393ms (next.js: 269ms, application-code: 125ms)
+✓ Compiled in 1701ms
+ GET / 200 in 514ms (next.js: 218ms, application-code: 296ms)
+ GET / 200 in 248ms (next.js: 23ms, application-code: 225ms)
+ GET / 200 in 95ms (next.js: 16ms, application-code: 78ms)
+ GET / 200 in 412ms (next.js: 10ms, application-code: 401ms)
+ GET /api/auth/session 200 in 141ms (next.js: 104ms, application-code: 37ms)
+✓ Compiled in 833ms
+ GET / 200 in 382ms (next.js: 256ms, application-code: 126ms)
+✓ Compiled in 105ms
+ GET / 200 in 173ms (next.js: 126ms, application-code: 47ms)
+✓ Compiled in 104ms
+ GET / 200 in 183ms (next.js: 132ms, application-code: 52ms)
+✓ Compiled in 1028ms
+ GET / 200 in 737ms (next.js: 371ms, application-code: 366ms)
+ GET / 200 in 152ms (next.js: 12ms, application-code: 140ms)
+ GET / 200 in 46ms (next.js: 5ms, application-code: 41ms)
+ GET /admin 200 in 847ms (next.js: 151ms, application-code: 696ms)
+ GET /api/auth/session 200 in 149ms (next.js: 106ms, application-code: 43ms)
+ GET /volunteer 200 in 212ms (next.js: 59ms, application-code: 153ms)
+ GET /api/auth/session 200 in 32ms (next.js: 3ms, application-code: 29ms)
+ GET /admin 200 in 98ms (next.js: 6ms, application-code: 92ms)
+ GET /api/auth/session 200 in 15ms (next.js: 4ms, application-code: 11ms)

@@ -58,12 +58,12 @@ function LandingView({ onRoleSelect }: { onRoleSelect: (role: string) => void })
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aC0ydi00aDJ2NHptMC02di00aDJ2NGgtMnptLTYgNmgtNHYyaDR2LTJ6bS02IDBoLTR2Mmg0di0yeiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />
 
       {/* Theme toggle */}
-      <button
+      {/* <button
         onClick={toggleTheme}
         className="absolute top-6 right-6 p-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 transition-all z-20 shadow-lg"
       >
         {theme === 'light' ? <Moon className="w-5 h-5 text-white" /> : <Sun className="w-5 h-5 text-white" />}
-      </button>
+      </button> */}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center flex-1 px-4 py-16">
