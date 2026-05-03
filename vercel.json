@@ -3,8 +3,5 @@
   "devCommand": "next dev",
   "installCommand": "bun install",
   "framework": "nextjs",
-  "regions": ["hnd1"],
-  "env": {
-    "DATABASE_URL": "postgresql://postgres.jecoitlypcktfgmawgkm:kinsust_1234@aws-1-ap-northeast-1.pooler.supabase.com:5432/postgres"
-  }
+  "regions": ["hnd1"]
 }

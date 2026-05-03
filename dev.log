@@ -20094,3 +20094,317 @@ Executed query {
   rows: 2
 }
  GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 2.3s (next.js: 3ms, application-code: 2.3s)
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 995,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1004ms (next.js: 2ms, application-code: 1001ms)
+Executed query {
+  text: 'SELECT * FROM "Notification" WHERE ("volunteerId" = $1) ORDER BY "createdAt" DESC LIMIT 50',
+  duration: 988,
+  rows: 8
+}
+Executed query {
+  text: 'SELECT COUNT(*)::int AS "unreadCount" FROM "Notification" WHERE ("volunteerId" = $1) AND "read" = fa',
+  duration: 140,
+  rows: 1
+}
+ GET /api/notifications?userId=cmon88s4uyv2x27lgdrgrg4kt&userType=volunteer 200 in 1136ms (next.js: 2ms, application-code: 1134ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 1547,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 138,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 280,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 139,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 140,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 562,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 2.4s (next.js: 3ms, application-code: 2.4s)
+Executed query {
+  text: 'SELECT * FROM "Notification" WHERE ("volunteerId" = $1) ORDER BY "createdAt" DESC LIMIT 50',
+  duration: 992,
+  rows: 8
+}
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 1007,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1014ms (next.js: 3ms, application-code: 1011ms)
+Executed query {
+  text: 'SELECT COUNT(*)::int AS "unreadCount" FROM "Notification" WHERE ("volunteerId" = $1) AND "read" = fa',
+  duration: 138,
+  rows: 1
+}
+ GET /api/notifications?userId=cmon88s4uyv2x27lgdrgrg4kt&userType=volunteer 200 in 1139ms (next.js: 2ms, application-code: 1137ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 1562,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 139,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 278,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 145,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 147,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 557,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 2.4s (next.js: 3ms, application-code: 2.4s)
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 959,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 991ms (next.js: 16ms, application-code: 975ms)
+Executed query {
+  text: 'SELECT * FROM "Notification" WHERE ("volunteerId" = $1) ORDER BY "createdAt" DESC LIMIT 50',
+  duration: 977,
+  rows: 8
+}
+Executed query {
+  text: 'SELECT COUNT(*)::int AS "unreadCount" FROM "Notification" WHERE ("volunteerId" = $1) AND "read" = fa',
+  duration: 137,
+  rows: 1
+}
+ GET /api/notifications?userId=cmon88s4uyv2x27lgdrgrg4kt&userType=volunteer 200 in 1131ms (next.js: 6ms, application-code: 1125ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 1519,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 134,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 275,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 135,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 137,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 422,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 2.2s (next.js: 4ms, application-code: 2.2s)
+Executed query {
+  text: 'SELECT * FROM "Notification" WHERE ("volunteerId" = $1) ORDER BY "createdAt" DESC LIMIT 50',
+  duration: 137,
+  rows: 8
+}
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 134,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 158ms (next.js: 16ms, application-code: 142ms)
+Executed query {
+  text: 'SELECT COUNT(*)::int AS "unreadCount" FROM "Notification" WHERE ("volunteerId" = $1) AND "read" = fa',
+  duration: 137,
+  rows: 1
+}
+ GET /api/notifications?userId=cmon88s4uyv2x27lgdrgrg4kt&userType=volunteer 200 in 286ms (next.js: 4ms, application-code: 282ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 692,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 137,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 277,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 135,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 137,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 422,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1420ms (next.js: 9ms, application-code: 1411ms)
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 138,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 152ms (next.js: 8ms, application-code: 145ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 692,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 138,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 273,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 136,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 140,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 546,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1530ms (next.js: 3ms, application-code: 1527ms)
+Executed query {
+  text: 'SELECT * FROM "Notification" WHERE ("volunteerId" = $1) ORDER BY "createdAt" DESC LIMIT 50',
+  duration: 140,
+  rows: 8
+}
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 134,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 155ms (next.js: 15ms, application-code: 140ms)
+Executed query {
+  text: 'SELECT COUNT(*)::int AS "unreadCount" FROM "Notification" WHERE ("volunteerId" = $1) AND "read" = fa',
+  duration: 138,
+  rows: 1
+}
+ GET /api/notifications?userId=cmon88s4uyv2x27lgdrgrg4kt&userType=volunteer 200 in 290ms (next.js: 5ms, application-code: 285ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 693,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 138,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 272,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 136,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 141,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 420,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1413ms (next.js: 9ms, application-code: 1405ms)
+Executed query {
+  text: 'SELECT * FROM "Message" WHERE "senderId" = $1 ORDER BY "createdAt" DESC LIMIT 100',
+  duration: 138,
+  rows: 1
+}
+ GET /api/contact?senderId=cmon88s4uyv2x27lgdrgrg4kt 200 in 149ms (next.js: 5ms, application-code: 144ms)
+Executed query {
+  text: 'SELECT * FROM "Task" WHERE "volunteerId" = $1 ORDER BY "createdAt" DESC',
+  duration: 846,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Donation" WHERE "id" = ANY($1)',
+  duration: 136,
+  rows: 4
+}
+Executed query {
+  text: 'SELECT * FROM "Volunteer" WHERE "id" = ANY($1)',
+  duration: 330,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "Event" WHERE "id" = ANY($1)',
+  duration: 141,
+  rows: 1
+}
+Executed query {
+  text: 'SELECT * FROM "DonationItem" WHERE "donationId" = ANY($1)',
+  duration: 142,
+  rows: 3
+}
+Executed query {
+  text: 'SELECT * FROM "Donor" WHERE "id" = ANY($1)',
+  duration: 430,
+  rows: 2
+}
+ GET /api/tasks?volunteerId=cmon88s4uyv2x27lgdrgrg4kt 200 in 1626ms (next.js: 4ms, application-code: 1622ms)
